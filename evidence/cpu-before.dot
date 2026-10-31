@@ -1,0 +1,13 @@
+digraph "pr13" {
+rankdir=LR
+node [style=filled fillcolor="#f8f8f8"]
+subgraph cluster_L { "File: pr13" [shape=box fontsize=16 label="File: pr13\lType: cpu\lTime: 2026-10-31 11:44:32 MSK\lDuration: 3.15s, Total samples = 4360ms (138.61%)\lShowing nodes accounting for 4230ms, 97.02% of 4360ms total\lDropped 19 nodes (cum <= 21.80ms)\lShowing top 5 nodes out of 29\l\lSee https://git.io/JfYMW for how to read the graph\l" tooltip="pr13"] }
+N1 [label="work\nFib\n4040ms (92.66%)" id="node1" fontsize=24 shape=box tooltip="example.com/pr13/internal/work.Fib (4040ms)" color="#b20400" fillcolor="#edd5d5"]
+N2 [label="http\n(*conn)\nserve\n0 of 4110ms (94.27%)" id="node2" fontsize=8 shape=box tooltip="net/http.(*conn).serve (4110ms)" color="#b20300" fillcolor="#edd5d5"]
+N3 [label="runtime\npthread_cond_signal\n190ms (4.36%)" id="node3" fontsize=12 shape=box tooltip="runtime.pthread_cond_signal (190ms)" color="#b2a38b" fillcolor="#edebe7"]
+N4 [label="runtime\nmorestack\n0 of 240ms (5.50%)" id="node4" fontsize=8 shape=box tooltip="runtime.morestack (240ms)" color="#b29d81" fillcolor="#edeae6"]
+N5 [label="main\nmain\nfunc1\n0 of 4100ms (94.04%)" id="node5" fontsize=8 shape=box tooltip="main.main.func1 (4100ms)" color="#b20300" fillcolor="#edd5d5"]
+N2 -> N5 [label=" 4100ms" weight=95 penwidth=5 color="#b20300" tooltip="net/http.(*conn).serve ... main.main.func1 (4100ms)" labeltooltip="net/http.(*conn).serve ... main.main.func1 (4100ms)" style="dotted"]
+N5 -> N1 [label=" 4040ms" weight=93 penwidth=5 color="#b20400" tooltip="main.main.func1 -> example.com/pr13/internal/work.Fib (4040ms)" labeltooltip="main.main.func1 -> example.com/pr13/internal/work.Fib (4040ms)"]
+N4 -> N3 [label=" 190ms" weight=5 color="#b2a38b" tooltip="runtime.morestack ... runtime.pthread_cond_signal (190ms)" labeltooltip="runtime.morestack ... runtime.pthread_cond_signal (190ms)" style="dotted"]
+}

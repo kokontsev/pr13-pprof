@@ -1,0 +1,55 @@
+File: pr13
+Type: alloc_space
+Time: 2026-10-31 11:44:46 MSK
+Showing nodes accounting for 7159.91kB, 100% of 7159.91kB total
+      flat  flat%   sum%        cum   cum%
+ 2368.55kB 33.08% 33.08%  2368.55kB 33.08%  runtime/pprof.StartCPUProfile
+ 1538.05kB 21.48% 54.56%  1538.05kB 21.48%  runtime.mallocgc
+  688.56kB  9.62% 64.18%   688.56kB  9.62%  compress/flate.(*fastGen).addBlock
+  516.01kB  7.21% 71.39%   516.01kB  7.21%  runtime/pprof.(*profMap).lookup
+  512.69kB  7.16% 78.55%   512.69kB  7.16%  sync.(*Pool).pinSlow
+  512.04kB  7.15% 85.70%   512.04kB  7.15%  net.(*conn).Read
+  512.02kB  7.15% 92.85%   512.02kB  7.15%  syscall.anyToSockaddr
+  512.01kB  7.15%   100%   512.01kB  7.15%  main.main.func1
+         0     0%   100%   688.56kB  9.62%  compress/flate.(*Writer).Close (inline)
+         0     0%   100%   688.56kB  9.62%  compress/flate.(*compressor).close
+         0     0%   100%   688.56kB  9.62%  compress/flate.(*compressor).deflateFast
+         0     0%   100%   688.56kB  9.62%  compress/flate.(*fastEncL1).encode
+         0     0%   100%   688.56kB  9.62%  compress/gzip.(*Writer).Close
+         0     0%   100%   512.02kB  7.15%  internal/poll.(*FD).Accept
+         0     0%   100%   512.02kB  7.15%  internal/poll.accept
+         0     0%   100%   512.02kB  7.15%  main.main
+         0     0%   100%   512.02kB  7.15%  net.(*TCPListener).Accept
+         0     0%   100%   512.02kB  7.15%  net.(*TCPListener).accept
+         0     0%   100%   512.02kB  7.15%  net.(*netFD).accept
+         0     0%   100%  2880.56kB 40.23%  net/http.(*ServeMux).ServeHTTP
+         0     0%   100%   512.02kB  7.15%  net/http.(*Server).ListenAndServe
+         0     0%   100%   512.02kB  7.15%  net/http.(*Server).Serve
+         0     0%   100%   512.69kB  7.16%  net/http.(*conn).close
+         0     0%   100%   512.69kB  7.16%  net/http.(*conn).finalFlush
+         0     0%   100%  3393.24kB 47.39%  net/http.(*conn).serve
+         0     0%   100%   512.69kB  7.16%  net/http.(*conn).serve.func1
+         0     0%   100%   512.04kB  7.15%  net/http.(*connReader).backgroundRead
+         0     0%   100%  2880.56kB 40.23%  net/http.HandlerFunc.ServeHTTP
+         0     0%   100%   512.69kB  7.16%  net/http.putBufioReader
+         0     0%   100%  2880.56kB 40.23%  net/http.serverHandler.ServeHTTP
+         0     0%   100%  2368.55kB 33.08%  net/http/pprof.Profile
+         0     0%   100%   512.05kB  7.15%  runtime.(*scavengerState).init
+         0     0%   100%     1026kB 14.33%  runtime.allocm
+         0     0%   100%   512.05kB  7.15%  runtime.bgscavenge
+         0     0%   100%   512.02kB  7.15%  runtime.main
+         0     0%   100%     1026kB 14.33%  runtime.mstart
+         0     0%   100%     1026kB 14.33%  runtime.mstart0
+         0     0%   100%     1026kB 14.33%  runtime.mstart1
+         0     0%   100%     1026kB 14.33%  runtime.newm
+         0     0%   100%  1538.05kB 21.48%  runtime.newobject
+         0     0%   100%     1026kB 14.33%  runtime.resetspinning
+         0     0%   100%     1026kB 14.33%  runtime.schedule
+         0     0%   100%     1026kB 14.33%  runtime.startm
+         0     0%   100%     1026kB 14.33%  runtime.wakep
+         0     0%   100%   516.01kB  7.21%  runtime/pprof.(*profileBuilder).addCPUData
+         0     0%   100%   688.56kB  9.62%  runtime/pprof.(*profileBuilder).build
+         0     0%   100%  1204.57kB 16.82%  runtime/pprof.profileWriter
+         0     0%   100%   512.69kB  7.16%  sync.(*Pool).Put
+         0     0%   100%   512.69kB  7.16%  sync.(*Pool).pin
+         0     0%   100%   512.02kB  7.15%  syscall.Accept

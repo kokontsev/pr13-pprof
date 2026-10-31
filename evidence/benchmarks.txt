@@ -1,0 +1,12 @@
+goos: darwin
+goarch: arm64
+pkg: example.com/pr13/internal/work
+cpu: Apple M5
+BenchmarkFib-10        	     355	   3384907 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-10        	     356	   3411632 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFib-10        	     356	   3399304 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFibFast-10    	75563181	        15.73 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFibFast-10    	77925660	        15.64 ns/op	       0 B/op	       0 allocs/op
+BenchmarkFibFast-10    	76493413	        15.71 ns/op	       0 B/op	       0 allocs/op
+PASS
+ok  	example.com/pr13/internal/work	8.648s

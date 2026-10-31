@@ -1,0 +1,36 @@
+File: pr13
+Type: cpu
+Time: 2026-10-31 11:44:32 MSK
+Duration: 3.15s, Total samples = 4.36s (138.61%)
+Showing nodes accounting for 4.30s, 98.62% of 4.36s total
+Dropped 19 nodes (cum <= 0.02s)
+      flat  flat%   sum%        cum   cum%
+     4.04s 92.66% 92.66%      4.04s 92.66%  example.com/pr13/internal/work.Fib
+     0.19s  4.36% 97.02%      0.19s  4.36%  runtime.pthread_cond_signal
+     0.06s  1.38% 98.39%      0.06s  1.38%  syscall.rawsyscalln
+     0.01s  0.23% 98.62%      0.04s  0.92%  runtime.findRunnable
+         0     0% 98.62%      0.05s  1.15%  example.com/pr13/internal/work.TimeIt.1
+         0     0% 98.62%      0.05s  1.15%  internal/poll.(*FD).Write
+         0     0% 98.62%      0.06s  1.38%  internal/poll.ignoringEINTRIO (inline)
+         0     0% 98.62%      0.05s  1.15%  log.(*Logger).output
+         0     0% 98.62%      0.05s  1.15%  log.Printf
+         0     0% 98.62%      4.10s 94.04%  main.main.func1
+         0     0% 98.62%      4.10s 94.04%  net/http.(*ServeMux).ServeHTTP
+         0     0% 98.62%      4.11s 94.27%  net/http.(*conn).serve
+         0     0% 98.62%      4.10s 94.04%  net/http.HandlerFunc.ServeHTTP
+         0     0% 98.62%      4.10s 94.04%  net/http.serverHandler.ServeHTTP
+         0     0% 98.62%      0.05s  1.15%  os.(*File).Write
+         0     0% 98.62%      0.05s  1.15%  os.(*File).write (inline)
+         0     0% 98.62%      0.24s  5.50%  runtime.gopreempt_m (inline)
+         0     0% 98.62%      0.24s  5.50%  runtime.goschedImpl
+         0     0% 98.62%      0.24s  5.50%  runtime.morestack
+         0     0% 98.62%      0.24s  5.50%  runtime.newstack
+         0     0% 98.62%      0.20s  4.59%  runtime.notewakeup
+         0     0% 98.62%      0.04s  0.92%  runtime.schedule
+         0     0% 98.62%      0.20s  4.59%  runtime.semawakeup
+         0     0% 98.62%      0.20s  4.59%  runtime.startm
+         0     0% 98.62%      0.20s  4.59%  runtime.wakep
+         0     0% 98.62%      0.05s  1.15%  syscall.Write (inline)
+         0     0% 98.62%      0.06s  1.38%  syscall.syscall
+         0     0% 98.62%      0.06s  1.38%  syscall.syscalln
+         0     0% 98.62%      0.05s  1.15%  syscall.write

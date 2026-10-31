@@ -1,0 +1,13 @@
+Total: 4.36s
+ROUTINE ======================== example.com/pr13/internal/work.Fib in /Users/kokontsev/Desktop/Учеба/5 курс/Технологии инд. прог./Go-Labs/pr13-pprof/internal/work/fib.go
+     4.04s      7.35s (flat, cum) 168.58% of Total
+     2.10s      2.10s      8:func Fib(n int) int {
+     160ms      160ms      9:	if n < 2 {
+     1.05s      1.05s     10:		return n
+         .          .     11:	}
+     730ms      4.04s     12:	return Fib(n-1) + Fib(n-2)
+         .          .     13:}
+         .          .     14:func FibFast(n int) int {
+         .          .     15:	a, b := 0, 1
+         .          .     16:	for i := 0; i < n; i++ {
+         .          .     17:		a, b = b, a+b

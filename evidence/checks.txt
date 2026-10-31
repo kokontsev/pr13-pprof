@@ -1,0 +1,7 @@
+$ go test ./...
+?   	example.com/pr13/cmd/api	[no test files]
+ok  	example.com/pr13/internal/work	(cached)
+
+
+$ go vet ./...
+
